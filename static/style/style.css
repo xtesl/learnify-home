@@ -11,6 +11,26 @@
   font-stretch: 75% 125%;
 }
 
+/* Default styles */
+/* Add your default styles here */
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .header {
+    /* Example: Reduce font size for header text */
+    font-size: 20px;
+  }
+
+  /* Example: Adjust layout for smaller screens */
+  .container {
+    /* Example: Reduce width of containers */
+    max-width: 90%;
+  }
+
+  /* Add more styles as needed for smaller screens */
+}
+
 :root {
   --h1: 3.5rem;
   --h2: 3rem;
