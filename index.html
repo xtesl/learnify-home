@@ -143,14 +143,17 @@
         </div>
       </div>
     </footer>
-    <script>
-       const isLoggedIn = localStorage.getItem('isLoggedIn');
-      console.log(isLoggedIn);
+<script>
+        // Parse URL parameters to check login status
+        const urlParams = new URLSearchParams(window.location.search);
+        const loginStatus = urlParams.get('login');
 
-  if (!isLoggedIn) {
-    // If the user is not logged in, redirect them to the login page
-    window.location.href = 'https://learnify-register.onrender.com'; // Replace with your login page URL
-  }
+        if (loginStatus === 'true') {
+            window.location.href = "https://learnify-home.onrender.com"
+        } else {
+            alert('You don\'t have access!');
+            
+        }
     </script>
   </body>
 </html>
