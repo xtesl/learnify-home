@@ -144,13 +144,26 @@
       </div>
     </footer>
 <script>
-        // Parse URL parameters to check login status
-        const urlParams = new URLSearchParams(window.location.search);
-        const loginStatus = urlParams.get('login');
+        // Function to parse URL parameters
+        function parseURLParams() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const params = {};
+            for (const [key, value] of urlParams.entries()) {
+                params[key] = value;
+            }
+            return params;
+        }
 
-        if (loginStatus === 'true') {
-            window.location.href = "https://learnify-home.onrender.com"
-        } 
+        // Wait for DOM content to load before running the code
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = parseURLParams();
+            if (params.login === 'true') {
+                alert('You are logged in!');
+            } else {
+                alert('You are not logged in!');
+                // Redirect to login page or take appropriate action
+            }
+        });
     </script>
   </body>
 </html>
