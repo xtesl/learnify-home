@@ -144,7 +144,12 @@
       </div>
     </footer>
     <script>
-      window.location.href = 'https://learnify-register.onrender.com';
+       const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+  if (!isLoggedIn) {
+    // If the user is not logged in, redirect them to the login page
+    window.location.href = 'https://learnify-register.onrender.com'; // Replace with your login page URL
+  }
     </script>
   </body>
 </html>
